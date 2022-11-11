@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background: rgb(62, 61, 61)">
+    <script>
+        const pokemons = (data) => {
+            const container = document.createElement('div');
+            container.classList.add('container');
+      
+            const img = document.createElement('img');
+            container.appendChild(img)
+            img.setAttribute('src', data)
+           document.body.appendChild(container); 
+      };
+
+      let index = 2
+            fetch('photo 12.jpg', {
+                // method: 'GET',
+                // headers: {
+                    //     'Content-type': 'aplication/json',
+                    //     'dfakfalk': 'lfkajdf'
+                    // },
+                    // body: JSON.stringify({
+                        // name: 'name',
+                        // lastName: 'lastName',
+                        // })
+                    }).then((res) => {
+                        console.log(res)
+                       res.blob().then((data) => {
+                       console.log(data)
+                        const imgUrl = URL.createObjectURL(data)
+                        // let pokeImg = []    
+                        //      for(item of data){
+                        //      pokeImg.push(item.picture) 
+                        //      }
+                        //     console.log(pokeImg[0])
+                         pokemons(imgUrl)
+                        })
+                        
+                    });
+                 
+    </script>
+  </body>
+</html>

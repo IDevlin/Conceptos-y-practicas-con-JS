@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+}
+
+body{
+    background: rgb(50, 50, 50);
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px; 
+}
+
+.form__container{
+    margin-top: 120px;
+    display: grid;
+    grid-template-rows:  min-max(250px, 1fr);
+    align-items: center;
+    justify-items: center;
+    gap: 2em;
+}
+
+.form__container input{
+    max-width: 250px;
+
+}
